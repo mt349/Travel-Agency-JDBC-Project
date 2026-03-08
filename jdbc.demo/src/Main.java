@@ -40,9 +40,9 @@ class Passenger {
 }
 
 public class Main {
-    private static final String url = "jdbc:mysql://localhost:3306/travel_agency";
-    private static final String username = "root";
-    private static final String password = "coderMT91268";
+    private static final String url = System.getenv("DB_URL");
+    private static final String username = System.getenv("DB_USER");
+    private static final String password = System.getenv("DB_PASS");
 
     public static void main(String[] args) {
         try {
@@ -120,4 +120,5 @@ public class Main {
             e.printStackTrace();
         }
     }
+
 }
